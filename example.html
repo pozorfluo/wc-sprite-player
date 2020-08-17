@@ -20,16 +20,35 @@
     <link rel="stylesheet" href="css/sprite.css" />
   </head>
   <body>
-    <sprite-player
-      id="controllable"
-      src="sprites/link.png"
-      height="130px"
-      width="120px"
-      anim="4"
-      duration="500ms"
-      frames="10"
-      onClick="this.toggle();"
-    ></sprite-player>
+    <fieldset class="sprites">
+      <legend>
+        sprite sheet src
+        <a href="sprites/ss_animat_8bpc.png" target="_blank">icons</a>
+        |
+        <a href="sprites/link.png" target="_blank">link</a>
+      </legend>
+      <sprite-player
+        id="icons"
+        src="sprites/ss_animat_8bpc.png"
+        height="128px"
+        width="128px"
+        anim="4"
+        duration="500ms"
+        frames="35"
+        onClick="this.toggle();"
+      ></sprite-player>
+      <sprite-player
+        id="link"
+        src="sprites/link.png"
+        height="130px"
+        width="120px"
+        anim="4"
+        duration="500ms"
+        frames="10"
+        onClick="this.toggle();"
+      ></sprite-player>
+    </fieldset>
+
     <fieldset class="controls">
       <legend>controls</legend>
       <p>
@@ -41,7 +60,7 @@
       <p>
         A, W, S, D
       </p>
-      <p><i>toggle pause</i> : SPACE</p>
+      <p><i>toggle pause</i> : SPACE, left click</p>
       <p><i>pause after current loop is done / reset</i> : C</p>
       <p><i>play</i> : X</p>
     </fieldset>
@@ -52,7 +71,8 @@
   </body>
   <script src="js/components/sprite-player.js"></script>
   <script>
-    const sprite = document.getElementById('controllable');
+    const icons = document.getElementById('icons');
+    const sprite = document.getElementById('link');
     const speed_slider = document.getElementById('speed');
 
     document.addEventListener(
@@ -65,31 +85,45 @@
           case 'ArrowUp':
           case 'z':
           case 'w':
-            sprite.setAnim(6);
+            sprite.setAttribute('anim', 6);
+            icons.setAttribute('anim', 1);
+            icons.setAttribute('frames', 31);
+            icons.setFr;
             break;
           case 'ArrowDown':
           case 's':
-            sprite.setAnim(4);
+            sprite.setAttribute('anim', 4);
+            icons.setAttribute('anim', 0);
+            icons.setAttribute('frames', 36);
             break;
           case 'ArrowLeft':
           case 'q':
           case 'a':
-            sprite.setAnim(5);
+            sprite.setAttribute('anim', 5);
+            icons.setAttribute('anim', 2);
+            icons.setAttribute('frames', 31);
             break;
           case 'ArrowRight':
           case 'd':
-            sprite.setAnim(7);
+            sprite.setAttribute('anim', 7);
+            icons.setAttribute('anim', 3);
+            icons.setAttribute('frames', 18);
             break;
           case ' ':
             sprite.toggle();
+            icons.toggle();
             break;
           case 'x':
             sprite.play();
+            icons.play();
             break;
           case 'c':
             sprite.pauseAfter();
+            icons.pauseAfter();
             break;
         }
+
+        e.preventDefault();
       },
       false
     );
@@ -99,6 +133,7 @@
       (e) => {
         const duration = ~~((101 - e.target.value) * 10);
         sprite.setLoopDuration(duration);
+        icons.setLoopDuration(duration);
       },
       false
     );

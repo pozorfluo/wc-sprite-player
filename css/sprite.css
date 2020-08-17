@@ -15,12 +15,15 @@ body {
   height: 100vh;
 }
 
-.controls, .speed {
+.controls, .speed , .sprites{
     margin: 4rem;
     text-align: center;
     width: 50%;
     margin: 0 auto;
     font-size: 1.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 legend {
