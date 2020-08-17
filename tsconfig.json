@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "strict": true,
+        "alwaysStrict": true,
+        "strictNullChecks" : true,
+        "strictPropertyInitialization": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "module": "CommonJS",
+        "types": ["node", "jest"],
+        // "typeRoots": ["./noops-and-crosses/node_modules/@types"],
+        "outDir": "js",
+        "removeComments": true
+    },
+    "files": [
+        "js/src/script.ts"
+    ],
+    "exclude": [
+        "node_modules",
+    ],
+}

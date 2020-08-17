@@ -1,0 +1,35 @@
+:root {
+  --color-bg: #0b0829;
+  --color-bg-muted: #120944;
+  --color-fg: #1ed760;
+  --color-fg-muted: #1ed75f7f;
+  --color-black: #202629;
+  --text: 1vmin;
+}
+
+body {
+  background: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.controls, .speed {
+    margin: 4rem;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight : 900;
+}
+
+
+
+sprite-player {
+    margin: 0 auto;
+}
