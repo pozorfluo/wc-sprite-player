@@ -70,23 +70,23 @@ class SpritePlayer extends HTMLElement {
     }
   }
 
-  setLoopDuration(duration: number): this {
-    // this.css.setProperty('--duration', duration + 'ms');
-    this.setAttribute('duration', duration + 'ms');
-    return this;
-  }
+//   setLoopDuration(duration: number): this {
+//     // this.css.setProperty('--duration', duration + 'ms');
+//     this.setAttribute('duration', duration + 'ms');
+//     return this;
+//   }
 
-  setLoop(iterations: string): this {
-    // this.css.setProperty('animation-iteration-count', iterations);
-    this.setAttribute('loop', iterations + '');
-    return this;
-  }
+//   setLoop(iterations: string): this {
+//     // this.css.setProperty('animation-iteration-count', iterations);
+//     this.setAttribute('loop', iterations + '');
+//     return this;
+//   }
 
-  setAnim(anim: number): this {
-    // this.css.setProperty('--anim', anim + '');
-    this.setAttribute('anim', anim + '');
-    return this;
-  }
+//   setAnim(anim: number): this {
+//     // this.css.setProperty('--anim', anim + '');
+//     this.setAttribute('anim', anim + '');
+//     return this;
+//   }
   play(): void {
     /** Restore loop settings if any. */
     if (this._loop) {
