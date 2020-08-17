@@ -22,18 +22,6 @@ class SpritePlayer extends HTMLElement {
             this.css.setProperty('--' + name, (newValue !== null && newValue !== void 0 ? newValue : 0) + '');
         }
     }
-    setLoopDuration(duration) {
-        this.setAttribute('duration', duration + 'ms');
-        return this;
-    }
-    setLoop(iterations) {
-        this.setAttribute('loop', iterations + '');
-        return this;
-    }
-    setAnim(anim) {
-        this.setAttribute('anim', anim + '');
-        return this;
-    }
     play() {
         if (this._loop) {
             this.css.setProperty('animation-iteration-count', this._loop);

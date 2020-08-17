@@ -131,9 +131,9 @@
     speed_slider.addEventListener(
       'change',
       (e) => {
-        const duration = ~~((101 - e.target.value) * 10);
-        sprite.setLoopDuration(duration);
-        icons.setLoopDuration(duration);
+        const duration = ~~((101 - e.target.value) * 10)  + 'ms';
+        sprite.setAttribute('duration', duration);
+        icons.setAttribute('duration', duration);
       },
       false
     );
