@@ -1,3 +1,9 @@
+/**
+ * @todo Consider add a possibly static Atlas of presets
+ * @todo Consider parsing a json of metadta as Atlas
+ * @todo Implement usePreset(atlas_key)
+ * @todo Implement set([...allsettings])
+ */
 class SpritePlayer extends HTMLElement {
   static _template: DocumentFragment = (() => {
     const t = document.createElement('template');
