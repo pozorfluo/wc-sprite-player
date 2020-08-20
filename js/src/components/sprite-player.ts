@@ -1,4 +1,13 @@
 /**
+ * Fixed cell size sprite player web component.
+ * @todo see https://runem.github.io/web-component-analyzer/ and fill :
+ *   @attr {Boolean} disabled - Disables this element
+ *   @fires change - Dispatched when the text of the text field changes
+ *   @slot - Default content placed inside of the text field
+ *   @slot header - Content placed in the header of the text field
+ *   @cssprop --placeholder-color - Controls the color of the placeholder
+ *   @csspart placeholder - Placeholder css shadow part
+ * 
  * @todo Consider add a possibly static Atlas of presets
  * @todo Consider parsing a json of metadta as Atlas
  * @todo Implement usePreset(atlas_key)
